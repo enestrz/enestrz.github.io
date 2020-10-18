@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  
+  font-family: "Lato", "Arial", sans-serif;
+  
+}
+
+header{
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed; 
+}

@@ -103,9 +103,11 @@ html {
     text-align: center;
     margin: 0px auto;
     font-size: 1.1rem;
-    background-color: #af6900;
-    border-bottom: solid #2f3640;
-    font-weight: 420;
+    
+    border-top: solid 2px #f05555;
+  }
+  .active li:last-child{
+    border-bottom: solid 2px #f05555;
   }
 
   .nav-logo:link,
@@ -118,10 +120,10 @@ html {
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
   }
-  .nav-link:active,
+  /* .nav-link:active,
   .nav-link:hover {
-    color: #2f3640;
-  }
+    
+  } */
 }
 
 @media only screen and (min-width: 900px) {

@@ -17,8 +17,14 @@ close[0].onclick = function () {
 let navList = document.getElementById("navList");
 let navToggle = document.getElementById("navToggle");
 
-navToggle.addEventListener("click", function() {
+navToggle.addEventListener("click", function () {
   navList.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach((item) => {
+  item.addEventListener("click", () => {
+    navToggle.click();
+  });
 });
 
 //End of Responsive Navigation Bar

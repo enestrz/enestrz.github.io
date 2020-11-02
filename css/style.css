@@ -11,20 +11,11 @@ html {
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  /* font-family: 'Source Code Pro', monospace; */
   font-family: "Roboto", sans-serif;
   color: whitesmoke;
   scroll-behavior: smooth;
   background-color: #2f3640;
 }
-
-/* .clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-} */
 
 /* Back to Top Button */
 
@@ -40,7 +31,6 @@ html {
   bottom: 0px;
   text-align: center;
 }
-
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -50,7 +40,6 @@ html {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .closebtn:hover {
   color: black;
 }
@@ -73,13 +62,13 @@ html {
   font-size: 1.6rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 899px) {
   .nav-toggle {
     display: block;
     float: right;
     padding-right: 7%;
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     background: none;
     color: whitesmoke;
     outline: none;
@@ -96,18 +85,22 @@ html {
   .active {
     display: block;
     list-style: none;
-    margin-top: 2px;
-    padding: 0 7%;
+    margin-top: 5px;
+    padding: 0 1%;
+    margin: 5px 6.5% 0;
+    background-color: #1c77b0;
+    font-size: 1rem;
+    font-weight: 400;
   }
   .active li {
-    text-align: center;
-    margin: 0px auto;
-    font-size: 1.1rem;
-    
-    border-top: solid 2px #f05555;
+    padding-bottom: 4px;
+    padding-top: 4px;
   }
-  .active li:last-child{
-    border-bottom: solid 2px #f05555;
+  .active li:not(:last-child) {
+    border-bottom: solid 2px #2f3640;
+  }
+  .active a:hover {
+    color: #292c4a;
   }
 
   .nav-logo:link,
@@ -120,10 +113,10 @@ html {
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
   }
-  /* .nav-link:active,
-  .nav-link:hover {
-    
-  } */
+  .nav-logo:hover {
+    /* color: #f05555; */
+    border-bottom: 2px solid #f05555;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -166,11 +159,6 @@ html {
     border-bottom: 2px solid #f05555;
   }
 }
-/* .nav-logo {
-  font-size: 1.4rem;
-  user-select: none;
-} */
-/* Navigation Toggler Button */
 
 /* Intro */
 /* .intro1 {

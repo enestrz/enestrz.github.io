@@ -25,7 +25,6 @@ html {
   width: 100%;
   padding: 10px;
   background-color: #af6900;
-  color: white;
   opacity: 1;
   transition: opacity 0.6s;
   bottom: 0px;
@@ -56,19 +55,28 @@ html {
   padding-top: 20px;
   font-size: 1.3rem;
 }
+
+/* Logo */
 .nav-logo {
   margin-left: 7%;
   user-select: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
+/* Header Context */
+.header-context {
+  display: grid;
+}
+
+/* Screen size smaller than 900px */
 @media screen and (max-width: 899px) {
+  /* Toggle Button */
   .nav-toggle {
     display: block;
     float: right;
     padding-right: 7%;
     border: none;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     background: none;
     color: whitesmoke;
     outline: none;
@@ -78,6 +86,8 @@ html {
   .nav-toggle:active {
     transform: translateY(2px);
   }
+
+  /* Links */
   .nav-list {
     display: none;
   }
@@ -88,7 +98,7 @@ html {
     margin-top: 5px;
     padding: 0 1%;
     margin: 5px 6.5% 0;
-    background-color: #1c77b0;
+    /* background-color: #1c77b0; */
     font-size: 1rem;
     font-weight: 400;
   }
@@ -97,10 +107,12 @@ html {
     padding-top: 4px;
   }
   .active li:not(:last-child) {
-    border-bottom: solid 2px #2f3640;
+    /* border-bottom: solid 2px #2f3640; */
+    border-bottom: solid 2px #af6900;
   }
   .active a:hover {
-    color: #292c4a;
+    color: #b6c3d6;
+    opacity: 0.9;
   }
 
   .nav-logo:link,
@@ -118,7 +130,7 @@ html {
     border-bottom: 2px solid #f05555;
   }
 }
-
+/* Screen size bigger than 900px */
 @media only screen and (min-width: 900px) {
   .nav {
     display: flex;

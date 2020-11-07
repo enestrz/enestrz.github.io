@@ -118,7 +118,7 @@ html {
   grid-template-rows: repeat(1fr, 2);
 }
 /* Screen size bigger than 900px */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   .nav {
     display: flex;
     justify-content: space-between;

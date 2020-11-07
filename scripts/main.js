@@ -20,12 +20,11 @@ $(document).ready(function () {
   });
 });
 
-// document.querySelectorAll(".nav-link").forEach((item) => {
-//   item.addEventListener("click", () => {
-//     navToggle.click();
-//   });
-// });
-//End of Responsive Navigation Bar
+$(document).ready(function () {
+  $(".nav-link").click(function () {
+    $("#navList").slideUp();
+  });
+});
 
 //Smoot Scrolling with JQuery
 $(".section-header ul a").on("click", function (e) {

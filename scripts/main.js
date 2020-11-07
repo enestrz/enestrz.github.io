@@ -26,5 +26,12 @@ document.querySelectorAll(".nav-link").forEach((item) => {
     navToggle.click();
   });
 });
-
 //End of Responsive Navigation Bar
+
+//Smoot Scrolling with JQuery
+$(".section-header ul a").on("click", function (e) {
+  e.preventDefault();
+  const href = $(this).attr("href");
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+});
+//End of Smoot Scrolling with JQuery

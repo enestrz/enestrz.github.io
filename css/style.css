@@ -13,7 +13,7 @@ html {
   text-rendering: optimizeLegibility;
   font-family: "Roboto", sans-serif;
   color: whitesmoke;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   background-color: #2f3640;
 }
 
@@ -66,6 +66,7 @@ html {
 /* Header Context */
 .header-context {
   display: grid;
+  grid-template-rows: repeat(1fr,2);
 }
 
 /* Screen size smaller than 900px */

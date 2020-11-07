@@ -14,18 +14,17 @@ close[0].onclick = function () {
 // End of Back to Top Button
 
 //Responsive Navigation Bar
-let navList = document.getElementById("navList");
-let navToggle = document.getElementById("navToggle");
-
-navToggle.addEventListener("click", function () {
-  navList.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-link").forEach((item) => {
-  item.addEventListener("click", () => {
-    navToggle.click();
+$(document).ready(function () {
+  $("#navToggle").click(function () {
+    $("#navList").slideToggle(1000);
   });
 });
+
+// document.querySelectorAll(".nav-link").forEach((item) => {
+//   item.addEventListener("click", () => {
+//     navToggle.click();
+//   });
+// });
 //End of Responsive Navigation Bar
 
 //Smoot Scrolling with JQuery

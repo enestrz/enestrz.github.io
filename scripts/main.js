@@ -42,10 +42,9 @@ $(".section-header ul a").on("click", function (e) {
   e.preventDefault();
   const href = $(this).attr("href");
   if (window.matchMedia("(max-width: 1000px)").matches) {
-    $("html, body").animate({ scrollTop: $(href).offset().top-140}, 800);
+    $("html, body").animate({ scrollTop: $(href).offset().top - 135 }, 800);
   } else {
-    $("html, body").animate({ scrollTop: $(href).offset().top}, 800);
+    $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
   }
-  
 });
 //End of Smoot Scrolling with JQuery

@@ -12,18 +12,64 @@ html {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-family: "Roboto", sans-serif;
-  color: whitesmoke;
-  /* scroll-behavior: smooth; */
-  background-color: #2f3640;
+  color: azure;
+  /* background-color: #2f3640; */
+  background-color: rgb(23, 23, 23);
+}
+.clearfix {
+  overflow: auto;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* Back to Top Button */
+#backBtn {
+  display: inline-block;
+  background-color: #dd9528;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backBtn:after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5em;
+  /* line-height: 20px; */
+  color: #fff;
+}
+#backBtn:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#backBtn:active {
+  background-color: #555;
+}
+#backBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* End of Back to Top Button */
 
 /* Temporary Alert  */
 .alert {
   position: fixed;
+  color: azure;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   background-color: #af6900;
   opacity: 1;
   transition: opacity 0.6s;
@@ -32,7 +78,7 @@ html {
 }
 .closebtn {
   margin-left: 15px;
-  color: white;
+  color: azure;
   font-size: 2rem;
   float: right;
   line-height: 20px;
@@ -42,18 +88,21 @@ html {
 .closebtn:hover {
   color: black;
 }
-/* Temporary Alert End */
+/* End of Temporary Alert  */
 
 .section {
   height: 100vh;
   width: 100%;
+  display: table;
+  max-width: none;
 }
 
 /* HEADER */
 /* NAVIGATION */
+
 .nav {
   padding-top: 20px;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   user-select: none;
 }
 /* Logo */
@@ -93,6 +142,7 @@ html {
   padding-top: 4px;
 }
 .nav-list li:not(:last-child) {
+  /* border-bottom: solid 2px #af6900; */
   border-bottom: solid 2px #af6900;
 }
 .nav-list a:hover {
@@ -113,9 +163,65 @@ html {
 }
 /* HEADER CONTEXT */
 .header-context {
-  display: grid;
-  margin-top: 50px;
-  grid-template-rows: repeat(1fr, 2);
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  margin-top: 80px;
+  /* justify-items: center; */
+  align-items: center;
+}
+/* Header Context Text */
+.header-context-text {
+  width: 100%;
+  padding: 0 5%;
+  font-size: 16px;
+}
+.header-context-text h3{
+  font-weight: 300;
+  font-size: 200%;
+}
+.header-context-text h1{
+  /* margin-top: 20px; */
+  padding-top: 15px;
+  font-weight:300;
+  font-size: 500%;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  border-bottom:solid 2px #af6900;
+  border-bottom-right-radius: 20%;
+}
+.header-context-text h4{
+  /* margin-top: 20px; */
+  font-weight:400;
+  font-size: 130%;
+  text-transform: uppercase;
+}
+hr{
+  width: 50%;
+  border: solid 1px #f05555;
+  margin: 3rem 0 2rem 0;
+}
+.header-context-text p{
+  font-weight:400;
+  font-size: 100%;
+  letter-spacing: 1px;
+}
+/* Header Context Image */
+.header-context-image {
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+}
+.header-context-image::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.header-context-image img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 /* Screen size bigger than 900px */
 @media only screen and (min-width: 1000px) {
@@ -131,9 +237,10 @@ html {
     display: flex !important;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 7%;
-    font-size: 1.4rem;
-    font-weight: 250;
+    padding-right: 6%;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: azure;
   }
   .nav-list {
     margin: 0;
@@ -153,7 +260,6 @@ html {
   .nav-logo:visited,
   .nav-list a:link,
   .nav-list a:visited {
-    color: azure;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.2s;
@@ -163,6 +269,14 @@ html {
   .nav-list a:hover {
     border-bottom: 2px solid #f05555;
     opacity: 1;
+  }
+
+  .header-context {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    margin-top: 50px;
+    justify-content: space-around;
   }
 }
 

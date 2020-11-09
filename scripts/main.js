@@ -10,13 +10,24 @@ close[0].onclick = function () {
 //End of Temporary Alert Box
 
 // Back to Top Button
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    $("#backBtn").addClass("show");
+  } else {
+    $("#backBtn").removeClass("show");
+  }
+});
 
+$("#backBtn").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, "300");
+});
 // End of Back to Top Button
 
 //Responsive Navigation Bar
 $(document).ready(function () {
   $("#navToggle").click(function () {
-    $("#navList").slideToggle(1000);
+    $("#navList").slideToggle(500);
   });
 });
 
@@ -30,6 +41,11 @@ $(document).ready(function () {
 $(".section-header ul a").on("click", function (e) {
   e.preventDefault();
   const href = $(this).attr("href");
-  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+  if (window.matchMedia("(max-width: 1000px)").matches) {
+    $("html, body").animate({ scrollTop: $(href).offset().top-140}, 800);
+  } else {
+    $("html, body").animate({ scrollTop: $(href).offset().top}, 800);
+  }
+  
 });
 //End of Smoot Scrolling with JQuery
